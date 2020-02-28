@@ -1,0 +1,6 @@
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\bin\Debug\DMS.BusinessEntities.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\bin\Debug\DMS.BusinessEntities.pdb
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\obj\Debug\DMS.BusinessEntities.csprojAssemblyReference.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\obj\Debug\DMS.BusinessEntities.csproj.CoreCompileInputs.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\obj\Debug\DMS.BusinessEntities.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.BusinessEntities\obj\Debug\DMS.BusinessEntities.pdb

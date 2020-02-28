@@ -1,0 +1,11 @@
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.Business.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.Business.pdb
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.BusinessEntities.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.Common.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.BusinessEntities.pdb
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\bin\Debug\DMS.Common.pdb
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\obj\Debug\DMS.Business.csprojAssemblyReference.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\obj\Debug\DMS.Business.csproj.CoreCompileInputs.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\obj\Debug\DMS.Business.csproj.CopyComplete
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\obj\Debug\DMS.Business.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Business\obj\Debug\DMS.Business.pdb

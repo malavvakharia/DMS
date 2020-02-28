@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WebApiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_cutomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_dealer">
+          <Key>
+            <PropertyRef Name="DealerId" />
+          </Key>
+          <Property Name="DealerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DealerName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_vehicle">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerId" Type="int" Nullable="false" />
+          <Property Name="VehicleName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbl_vehicle_tbl_cutomer">
+          <End Role="tbl_cutomer" Type="Self.tbl_cutomer" Multiplicity="1" />
+          <End Role="tbl_vehicle" Type="Self.tbl_vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_cutomer">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="tbl_vehicle">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebApiModelStoreContainer">
+          <EntitySet Name="tbl_cutomer" EntityType="Self.tbl_cutomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_dealer" EntityType="Self.tbl_dealer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_vehicle" EntityType="Self.tbl_vehicle" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbl_vehicle_tbl_cutomer" Association="Self.FK_tbl_vehicle_tbl_cutomer">
+            <End Role="tbl_cutomer" EntitySet="tbl_cutomer" />
+            <End Role="tbl_vehicle" EntitySet="tbl_vehicle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebApiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_cutomer">
+          <Key>
+            <PropertyRef Name="CustomerId" />
+          </Key>
+          <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tbl_vehicle" Relationship="Self.FK_tbl_vehicle_tbl_cutomer" FromRole="tbl_cutomer" ToRole="tbl_vehicle" />
+        </EntityType>
+        <EntityType Name="tbl_dealer">
+          <Key>
+            <PropertyRef Name="DealerId" />
+          </Key>
+          <Property Name="DealerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DealerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_vehicle">
+          <Key>
+            <PropertyRef Name="VehicleId" />
+          </Key>
+          <Property Name="VehicleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerId" Type="Int32" Nullable="false" />
+          <Property Name="VehicleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tbl_cutomer" Relationship="Self.FK_tbl_vehicle_tbl_cutomer" FromRole="tbl_vehicle" ToRole="tbl_cutomer" />
+        </EntityType>
+        <Association Name="FK_tbl_vehicle_tbl_cutomer">
+          <End Role="tbl_cutomer" Type="Self.tbl_cutomer" Multiplicity="1" />
+          <End Role="tbl_vehicle" Type="Self.tbl_vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_cutomer">
+              <PropertyRef Name="CustomerId" />
+            </Principal>
+            <Dependent Role="tbl_vehicle">
+              <PropertyRef Name="CustomerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebApiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_cutomer" EntityType="Self.tbl_cutomer" />
+          <EntitySet Name="tbl_dealer" EntityType="Self.tbl_dealer" />
+          <EntitySet Name="tbl_vehicle" EntityType="Self.tbl_vehicle" />
+          <AssociationSet Name="FK_tbl_vehicle_tbl_cutomer" Association="Self.FK_tbl_vehicle_tbl_cutomer">
+            <End Role="tbl_cutomer" EntitySet="tbl_cutomer" />
+            <End Role="tbl_vehicle" EntitySet="tbl_vehicle" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebApiModelStoreContainer" CdmEntityContainer="WebApiEntities">
+          <EntitySetMapping Name="tbl_cutomer">
+            <EntityTypeMapping TypeName="WebApiModel.tbl_cutomer">
+              <MappingFragment StoreEntitySet="tbl_cutomer">
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_dealer">
+            <EntityTypeMapping TypeName="WebApiModel.tbl_dealer">
+              <MappingFragment StoreEntitySet="tbl_dealer">
+                <ScalarProperty Name="DealerId" ColumnName="DealerId" />
+                <ScalarProperty Name="DealerName" ColumnName="DealerName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_vehicle">
+            <EntityTypeMapping TypeName="WebApiModel.tbl_vehicle">
+              <MappingFragment StoreEntitySet="tbl_vehicle">
+                <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="VehicleName" ColumnName="VehicleName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

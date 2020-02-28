@@ -1,0 +1,6 @@
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\bin\Debug\DMS.Common.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\bin\Debug\DMS.Common.pdb
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\obj\Debug\DMS.Common.csprojAssemblyReference.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\obj\Debug\DMS.Common.csproj.CoreCompileInputs.cache
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\obj\Debug\DMS.Common.dll
+C:\Users\malav.vakharia\Documents\Visual Studio 2017\Projects\WebApi\DMS.Common\obj\Debug\DMS.Common.pdb
